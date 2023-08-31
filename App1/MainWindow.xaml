@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window
+    x:Class="App1.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:App1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <NavigationView x:Name="NavView"
+                    AlwaysShowHeader="False"
+                    CompactPaneLength="90"
+                    IsBackButtonVisible="Collapsed"
+                    IsPaneToggleButtonVisible="False"
+                    IsSettingsVisible="False"
+                    IsTitleBarAutoPaddingEnabled="True"
+                    Padding="0"
+                    Margin="0"
+                    PaneDisplayMode="LeftCompact"
+                    PaneTitle="Title"
+                    SelectionChanged="NavView_SelectionChanged">
+
+        <NavigationView.MenuItems>
+            <local:HomeMenuItem x:Name="nvi1" Text="One" />
+            <local:HomeMenuItem x:Name="nvi2" Text="Two" />
+            <local:HomeMenuItem x:Name="nvi3" Text="Three" />
+        </NavigationView.MenuItems>
+
+        <NavigationView.Content>
+            <Button Content="Click" Click="Button_Click" />
+        </NavigationView.Content>
+    </NavigationView>
+</Window>

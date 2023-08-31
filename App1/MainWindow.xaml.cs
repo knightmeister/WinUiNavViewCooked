@@ -37,7 +37,8 @@ namespace App1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
+            // If the SelectedItem in ctor is commented out it won't crash, and clicking it in the button allows assignment
+            NavView.SelectedItem = nvi1;
         }
     }
 }
